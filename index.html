@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Portfolio Homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">HOME</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">OM MEG</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          PÅL OSNES
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/NaturBildeAkryl1.jpg)"></div>
+
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="NaturbildeAkryl1.html">Bilde av natur i akryl.</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/Selvportrett/Selvportrett1.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="Selvportretter.html">Selvportrett samling</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/Aktivitetskompasset.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="Aktivitetskompasset.html">Aktivitetskompasset.UB</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/BetongKatedraen.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="Brutalist.html">Brutalistiske bilder</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/MinecraftImages/MCpic1.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="Minecraft.html">Minecraft Bilder</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/HeidiCover.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="Books.html">Bøker jeg har skrevet</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio7.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">Lenke7</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio8.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">lenke8</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio9.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">Lenke9</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio10.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">Lenke10</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio11.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">Lenke11</a></div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background-fake" style="background-image:url(images/portfolio12.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle"><a href="">Lenke12</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <h3>Følg meg</h3>
+  <div class="footer">
+    <div class="left-side">
+      <div class="folgmeg">
+        <a href="">Youtube</a>
+        <a href="">Instagram</a>
+        <a href="">Facebook</a>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="brand">
+        PÅL OSNES
+      </div>
+      <p>Pål Osnes &copy 2021</p>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
